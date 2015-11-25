@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Formelemente</title>
+  </head>
+
+  <body>
+    <h1>Neue Input-Elemente in HTML5</h1>
+    <form>
+    	<p>Auswahlliste:
+       <input list="browsers" />
+       <datalist name="browsers">
+    		 <option value="Internet Explorer">
+    		 <option value="Firefox">
+    		 <option value="Google Chrome">
+    		 <option value="Opera">
+    		 <option value="Safari">
+       </datalist>
+      </p>
+      <p>Datum: 
+        <input type="date" min="2012-01-01" max="2014-12-31" value="2012-01-01">
+      </p>
+      <p>E-Mail: 
+        <input type="email" value="name@provider.de">
+      </p>
+      <p>Farbwähler: 
+        <input type="color">
+      </p>
+      <p>Regler: 
+        <input type="range" min="1950" max="2050" value="2012" onInput="year.value=value">
+        <output name="year"></output>
+      </p>
+      <p>Suchfeld: 
+        <input type="search" placeholder="Suche">
+      </p>
+      <p>Telefon: 
+        <input type="tel" placeholder="02222 22222-123">
+      </p>
+      <p>Uhrzeit: 
+        <input type="time">
+      </p>
+      <p>URL: 
+        <input type="url" placeholder="http://">
+      </p>
+      <p>Zahl: 
+        <input type="number" min="1" max="10" value="1">
+      </p>
+    </form>  
+  </body>
+</html>
