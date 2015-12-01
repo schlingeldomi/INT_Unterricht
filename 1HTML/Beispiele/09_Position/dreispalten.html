@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+   <title>Little Boxes - position: absolute - Einfaches 3-spaltiges Layout</title>
+   <style type="text/css">
+*  { padding: 0; margin: 0; }
+body { 
+   color: black; 
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   font-size: small; 
+   background-color: #8c8c8c; 
+}
+h1, h2, h3, p, pre { margin-bottom: 1em; }  
+h1 { font-size: 150%; } 
+h2 { font-size: 130%; margin-bottom: 1em; }
+#navibereich { 
+   position: absolute;
+   top: 0;
+   left: 0; 
+   width: 200px;
+   background-color: #ffeda0;
+   padding: 10px;
+   border: 1px solid black; 
+   margin: 10px; 
+}   
+#sidebar { 
+   position: absolute; 
+   top: 0; 
+   right: 0; 
+   width: 200px; 
+   background-color: #ffeda0;
+   padding: 10px; 
+   border: 1px solid black; 
+   margin: 10px; 
+}   
+#textbereich { 
+   background-color: white; 
+   padding: 10px 20px;
+   border: 1px solid black;
+   margin: 10px; 
+   margin-left: 242px;
+   margin-right: 242px;
+}
+   
+   </style>
+</head>
+<body>
+
+<div id="textbereich">
+<h2>div#textbereich</h2>
+<p>Dieser Bereich hat einen großen linken und rechten Außenabstand, bleibt aber ansonsten ein Block-Element im normalen <em>Flow</em> und hat somit eine flexible Breite.</p>
+<pre>
+#textbereich {
+   background-color: white;
+   padding: 10px 20px;
+   border: 1px solid black;
+   margin: 10px;
+<strong>   margin-left: 242px;
+   margin-right: 242px;   </strong>
+}
+</pre>
+
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed quam lacus, feugiat eget, auctor a, ullamcorper nec, risus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+<p>Fusce adipiscing velit eget ligula. Cras eu quam. Pellentesque cursus placerat felis. Curabitur vel lacus vitae orci pellentesque feugiat. </p>
+
+</div> <!-- Ende textbereich -->
+
+<div id="navibereich">
+<h2>div#navibereich</h2>
+<p>Dieser Bereich ist <em>absolut positioniert</em></p>
+<pre>
+#navibereich {
+<strong>   position: absolute;
+   top: 0;
+   left: 0;
+   width: 200px;</strong>
+   background-color: #ffeda0;
+   padding: 10px;
+   border: 1px solid black;
+   margin: 10px;
+}
+</pre>
+</div> <!-- Ende navibereich -->
+
+<div id="sidebar">
+<h2>div#sidebar</h2>
+<p>Dieser Bereich ist <em>absolut positioniert</em></p>
+<pre>
+#sidebar {
+<strong>   position: absolute;
+   top: 0;
+   right: 0;
+   width: 200px;</strong>
+   background-color: #ffeda0;
+   padding: 10px;
+   border: 1px solid black;
+   margin: 10px;
+}
+</pre>
+</div> <!-- Ende sidebar -->
+
+</body>
+</html>

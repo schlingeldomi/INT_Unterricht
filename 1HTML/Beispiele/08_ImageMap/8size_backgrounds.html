@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0;" />
+		<title>background-size</title>
+		<style>
+			div {
+				background-color: #dddddd;
+				background-image: url("http://wiki.selfhtml.org/mediawiki/images/9/9e/Talbruecke_poehl.jpg");
+				background-position: center;
+				background-repeat: no-repeat;
+				border: 1px solid;
+				display: inline-block;
+				height: 120px;
+				margin: 20px 20px 20px 0;
+				text-align: center;
+				vertical-align: bottom;
+				width: 300px;
+			}
+			.caption {
+				background: white;
+				border: 1px solid;
+				display: inline-block;
+				margin-top: 90px;
+				padding: 0 3px;
+			}
+			#eins  { background-size: 50px;}
+			#zwei  { background-size: auto 100px;}
+			#drei  { background-size: 50%; }
+			#vier  { background-size: 50% 100%; }
+			#fuenf { background-size: contain; }
+			#sechs { background-size: cover; }
+		</style>
+	</head>
+	<body>
+		<h1>Verwendung von <code>background-size</code></h1>
+		<main role="main">
+			<h2>Hintergrundbilder skalieren</h2>
+			<div id="eins"><span class="caption">50px</span></div>
+			<div id="zwei"><span class="caption">auto 100px</span></div>
+			<div id="drei"><span class="caption">50%</span></div>
+			<div id="vier"><span class="caption">50% 100%</span></div>
+			<hr>
+			<div id="fuenf"><span class="caption">contain</span></div>
+			<div id="sechs"><span class="caption">cover</span></div>
+		</main>
+	</body>
+</html>

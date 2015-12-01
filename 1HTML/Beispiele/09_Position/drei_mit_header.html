@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+   <title>Little Boxes - position: absolute - 3-spaltig mit Kopfbereich</title>
+   <style type="text/css">
+*  { padding: 0; margin: 0; }
+body { 
+   color: black; 
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   font-size: small; 
+   background-color: #8c8c8c; 
+}
+h1, h2, h3, p, pre { margin-bottom: 1em; }  
+h1 { font-size: 150%; } 
+h2 { font-size: 130%; margin-bottom: 1em; }
+#kopfbereich { 
+   background-color: white;
+   padding: 10px 20px; 
+   border: 1px solid black;
+   margin: 10px;
+}
+#wrapper {
+   position: relative; 
+   /* border: 2px dashed white; */
+   /* margin:0 3px; */
+}
+#textbereich {
+   background-color: white; 
+   padding: 10px 20px;
+   border: 1px solid black;
+   margin: 10px;
+   margin-left: 242px;
+   margin-right: 242px;
+}
+#navibereich { 
+   position: absolute; 
+   top: 0;
+   left: 0;
+   width: 200px;
+   background-color: #ffeda0;
+   padding: 10px;
+   border: 1px solid black;
+   margin: 10px;
+   margin-top: 0;
+}
+#sidebar {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 200px;
+   background-color: #ffeda0;
+   padding: 10px; 
+   border: 1px solid black; 
+   margin: 10px; 
+   margin-top: 0;
+}
+   </style>
+</head>
+<body>
+<div id="kopfbereich">
+<h1><img src="logo.gif" alt="Little Boxes" width="222" height="32" /></h1>
+<p>#kopfbereich: Dieser Bereich ist im normalen <em>Flow</em>. </p>
+</div>
+
+<div id="wrapper">
+<div id="textbereich">
+<h2>#textbereich</h2>
+<p>Dieser Bereich hat einen großen linken und rechten Außenabstand, bleibt aber ansonsten ein normales Block-Element im <em>Flow</em> und hat somit eine flexible Breite.</p>
+<pre>
+#textbereich {
+   background-color: white;
+   padding: 10px 20px;
+   border: 1px solid black;
+   margin: 10px;
+<strong>   margin-left: 242px;
+   margin-right: 242px;   </strong>
+}
+</pre>
+
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed quam lacus, feugiat eget, auctor a, ullamcorper nec, risus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<p>Fusce adipiscing velit eget ligula. Cras eu quam. Pellentesque cursus placerat felis. Curabitur vel lacus vitae orci pellentesque feugiat. </p>
+
+</div> <!-- Ende textbereich -->
+
+<div id="navibereich">
+<h2>#navibereich</h2>
+<p>Dieser Bereich ist <em>absolut positioniert</em>.</p> 
+<p><code>top</code> und <code>left</code> beziehen sich auf das für diese Übung mit einer gestrichelten Linie sichtbar gemachte relativ positionierte <code>#wrapper</code>. </p>
+<pre>
+#navibereich {
+<strong>   position: absolute;
+   top: 0;
+   left: 0;
+   width: 200px;</strong>
+   background-color: #ffeda0;
+   padding: 10px;
+   border: 1px solid black;
+   margin: 10px;
+   margin-top: 0;
+}
+</pre>
+</div> <!-- Ende navibereich -->
+
+<div id="sidebar">
+<h2>#sidebar</h2>
+<p>Dieser Bereich ist <em>absolut positioniert</em>. </p>
+<p><code>top</code> und <code>left</code> beziehen sich auf das für diese Übung mit einer gestrichelten Linie sichtbar gemachte relativ positionierte <code>#wrapper</code>. </p>
+<pre>
+#sidebar { 
+<strong>   position: absolute;
+   top: 0;
+   right: 0;
+   width: 200px;</strong>
+   background-color: #ffeda0;
+   padding: 10px;
+   border: 1px solid black;
+   margin: 10px;
+   margin-top: 0;
+}
+</pre>
+</div> <!-- Ende sidebar -->
+</div> <!-- Ende wrapper -->
+</body>
+</html>
