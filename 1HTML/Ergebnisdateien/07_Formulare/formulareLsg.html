@@ -1,0 +1,73 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Übung 4: Ein HTML Eingabeformular</title>
+  <style type="text/css">
+  h1 {text-align:center;}
+  th {text-align:left;}
+  </style>
+ </head>
+ <body>
+  <h1>Übung 4: Ein HTML Eingabeformular</h1>
+  <form name="formular" action=...>
+   <table>
+    <tr>
+     <th>Vorname</th>  <td><input name="vorname" type=text size=50 maxlength=50></td>
+    </tr>
+    <tr>
+     <th>Nachname</th> <td><input name="nachname" type=text size=50 maxlength=50></td>
+    </tr>
+    <tr>
+     <th>Jahrgang</th> <td><input name="jahrgang" type=number size=4 maxlength=4 value=1990></td>
+    </tr>
+    <tr>
+     <th>Lieblingsfarbe</th>
+     <td>
+      <select name="lieblingsfarbe">
+       <option value=rot>Rot</option>
+       <option value=Grün>Grün</option>
+       <option value=Blau>Blau</option>
+       <option value=Gelb>Gelb</option>
+       <option value=Weiß>Weiß</option>
+       <option value=Schwarz>Schwarz</option>
+      </select>
+     </td>
+    </tr>
+    <tr>
+     <th align=left valign=top>Ruhetage</th>
+     <td>
+       <input type="checkbox" name="ruhetage" value="Montag"> Montag<br>
+       <input type="checkbox" name="ruhetage" value="Dienstag"> Dienstag<br>
+       <input type="checkbox" name="ruhetage" value="Mittwoch"> Mittwoch<br>
+       <input type="checkbox" name="ruhetage" value="Donnerstag"> Donnerstag<br>
+       <input type="checkbox" name="ruhetage" value="Freitag"> Freitag<br>
+       <input type="checkbox" name="ruhetage" value="Samstag"> Samstag<br>
+       <input type="checkbox" name="ruhetage" value="Sonntag"> Sonntag
+     </td>
+    </tr>
+    <tr>
+     <th align=left valign=top>Lieblingstag</th>
+     <td>
+       <input type="radio" name="lieblingstag" value="Montag"> Montag<br>
+       <input type="radio" name="lieblingstag" value="Dienstag"> Dienstag<br>
+       <input type="radio" name="lieblingstag" value="Mittwoch"> Mittwoch<br>
+       <input type="radio" name="lieblingstag" value="Donnerstag"> Donnerstag<br>
+       <input type="radio" name="lieblingstag" value="Freitag"> Freitag<br>
+       <input type="radio" name="lieblingstag" value="Samstag"> Samstag<br>
+       <input type="radio" name="lieblingstag" value="Sonntag"> Sonntag
+     </td>
+    </tr>
+    <tr>
+     <th align=left valign=top>Kommentar</th>
+     <td>
+      <textarea name=kommentar cols=40 rows=5>Ich finde dieses Formular toll...</textarea>
+     </td>
+    </tr>
+    <tr>
+     <td align=center> <input type=reset value="Alles löschen"> </td>
+     <td align=center> <input type=submit value="Abschicken" onClick="alert('Auswertung noch nicht programmiert!')"> </td>
+    </tr>
+   </table>
+  </form>
+ </body>
+</html>
