@@ -1,0 +1,31 @@
+h1 {
+	border-bottom: 1px solid red;
+}
+thead { 
+	color:green;
+}
+tfoot { 
+	color:red; 
+	font-weight:bold;
+}
+tbody { 
+	color:blue;
+}
+table {
+	width: 550px;
+	border: 1px solid purple;
+}
+td {
+	align: center;
+}
+#nav{
+	float: left;
+}
+#body {
+	float:right;
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+#footer {
+	clear: both;
+}
