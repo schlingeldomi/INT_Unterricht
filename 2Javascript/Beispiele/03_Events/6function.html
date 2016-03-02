@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39">
+
+  <title>Events</title>
+</head>
+
+<body>
+  <script language="JavaScript">
+function pruefung(formular)
+  {
+   if(formular.eingabe.value.length < 5)
+   {    alert("Bitte mindestens 5 Zeichen!"); return false; }
+        return true;
+  }
+  </script>
+
+  <form action="..." onsubmit="return pruefung(this)">
+    <input type="text" name="eingabe"> <input type="submit">
+  </form>
+</body>
+</html>

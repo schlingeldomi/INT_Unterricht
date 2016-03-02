@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39">
+
+  <title>Eigene Funktionen</title>
+  <script language="JavaScript" type="text/javascript">
+  function mw (sum1, sum2) {
+	var summe = (sum1 + sum2) / 2;
+	var ergebnis = "<p>Der Mittelwert der Zahlen " + sum1 +
+		" und " + sum2 + " ist: " + summe +
+		"<p>";
+	return ergebnis;
+}
+</script>
+</head>
+
+<body>
+  <h1>Eigene Funktionen</h1>
+  <pre>
+ <script language="JavaScript" type="text/javascript">
+document.write(mw(6,14));
+document.write(mw(1048,734));
+document.write(mw(44,55));
+document.write(mw(33,734));
+</script>
+</pre>
+</body>
+</html>

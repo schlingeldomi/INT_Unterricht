@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39">
+  <meta charset="utf-8">
+  <title>Angaben zur Person</title>
+  <script language="JavaScript" type="text/javascript">
+function zeigen()
+{
+   var Anrede = '';
+   if (window.document.Person.Geschlecht[0].checked) {
+      Anrede = 'Frau ';
+   } else {
+      if (window.document.Person.Geschlecht[1].checked){
+         Anrede = 'Herr ';
+	  }
+   }
+   var Name = window.document.Person.Vorname.value +' ' + window.document.Person.Nachname.value;
+   var Nachricht = 'Sie sind\n' + Anrede + ' ' + Name;
+   alert(Nachricht);
+} 
+</script>
+</head>
+<body>
+  <h1>Angaben zur Person</h1>
+  <form name="Person" id="Person">
+    Vorname:<br>
+    <input type="text" name="Vorname" value="" size="20"><br>
+    Nachname:<br>
+    <input type="text" name="Nachname" value="" size="20"><br>
+    <input type="radio" name="Geschlecht"> weiblich <input type="radio" name="Geschlecht">
+	männlich <input type="radio" name="Geschlecht" checked="checked"> keine Angabe<br>
+	<input type="button" value="Anzeigen" name="Anzeige" onclick="zeigen()">
+  </form>
+</body>
+</html>

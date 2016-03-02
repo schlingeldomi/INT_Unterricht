@@ -1,0 +1,40 @@
+<html>
+<head>
+  <meta charset="utf-8">
+<title>Eingabe testen</title>
+<script type="text/javascript">
+function validateName()
+{
+  var name = document.getElementById("Name").value;
+  if ( !name )
+  {
+		prompt("Name ist erforderlich","NameComment","red");
+		return false;
+  } 
+  else if (!name.match(/[a-z]+\s[a-z]+/i)){
+		prompt("Name ist nicht korrekt:  " +name,"NameComment","blue");
+		return true;
+  }
+  else {
+		prompt("Name ist korrekt:  " +name,"NameComment","lightgreen");
+		return true;
+  }
+}
+function prompt(message, location, color)
+{
+	document.getElementById(location).innerHTML=message;
+	document.getElementById(location).style.color=color;
+}
+</script>
+</head>
+<body>
+<div align="left">
+  <h2>Test einer Eingabe und des Wertes</h2>
+  <p>Geben Sie einen Namen ein:</p>
+  <form action="#" name="Eingabe">
+    <input type="Text" name="Feld" onkeyup="validateName();" id="Name">
+	<label id="NameComment"></label>
+  </form>
+</div>
+</body>
+</html>

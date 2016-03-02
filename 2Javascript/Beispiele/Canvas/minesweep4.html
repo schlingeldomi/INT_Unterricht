@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<script>
+	var c;
+	var box;
+	window.onload = function (){
+		var can = document.getElementById("myCanvas");
+		c = can.getContext("2d");
+		init();
+	};
+	function init(){
+		box = new Image();
+		box.src = "box.png";
+		drawCanvas();
+	};
+	function drawCanvas(){
+		c.clearRect(0,0,400,400);
+		var width= 30;
+		var height=30;
+		var zeilen=10;
+		var spalten=10;
+		for (i=0; i<zeilen; i++){
+			for (j=0; j<spalten; j++){
+				x= i*width;
+				y= j*height;
+			c.drawImage(box,x,y);
+			}
+		}
+	};
+	var mX;
+	var mY;
+	window.onclick = function(e){
+		mX = e.pageX;
+		mY = e.pageY;
+		var div = mX / mY;
+		alert(mX + "  " + mY );
+	};
+    </script>
+</head>
+<body>
+	<div id="control">
+	</div>
+	<div>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+	</div>
+</body>
+</html>
