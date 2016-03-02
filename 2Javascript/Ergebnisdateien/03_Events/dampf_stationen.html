@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39">
+
+  <script type="text/javascript" >
+  var sender = new Array ('N1','Energy','SWR3');
+  function getStation() {
+	var statsdim = window.document.forms[0].stats.length;
+	var aktelem;
+	for (var i = 0; i < statsdim; i++) {
+		aktelem = window.document.forms[0].stats[i];
+		if (aktelem.checked) {
+			window.document.forms[0].elements['station'].value = sender[i];
+		}
+	}
+  }
+
+  </script>
+<title></title>
+</head>
+<body>
+  <h2>Ein Dampfradio</h2>
+  <form onchange="getStation();">
+    <p><input type="text" size="25" name="station"></p>
+    <p>
+	<input type="radio" name="stats" onchange="getStation();">Station 1
+	<input type="radio" name="stats" onchange="getStation();">Station 2
+    <input type="radio" name="stats" onchange="getStation();">Station 3</p>
+  </form>
+</body>
+</html>
