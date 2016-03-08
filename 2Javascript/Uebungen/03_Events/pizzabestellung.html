@@ -3,17 +3,39 @@
 <head>
   <title>Pizzabestellung</title>
   <style type="text/css">
+      body { zoom:2;}
       body,td { font:10pt Verdana,Arial,sans-serif;}
   </style>
   <script type="text/javascript">
-     
+  function werteaus()
+  {
+	var text = "Ihre Pizza ist " ;
+	text += document.Pizzaform.size.value;
+	text +="\nund hat folgende Art: ";
+	text += document.Pizzaform.pizza.value;
+	
+
+	if (document.Pizzaform.pizza.value == "individuell" )
+	{
+		text +="\nund folgende Extras: ";
+		var checkboxes = document.getElementsByName('zutaten');
+		for (var i=0; i< checkboxes.length; i++)
+		{
+			if (checkboxes[i])
+			{
+			
+			}
+	}
+	
+	alert(text);
+  }   
   </script>
 
 </head>
 <body>
  
   <h2>WWW-Pizza-Service</h2>
-  <form action="" name="Pizzaform">
+  <form action="" name="Pizzaform" onsubmit="werteaus()">
     <p>Bestellen Sie eine fertige Pizza, oder stellen Sie eine Pizza<br>ganz nach Ihren Wünschen zusammen. Wir liefern alles.</p>
     <table summary="Tabelle zur formatierten Anzeige" border="0">
       <tr>
