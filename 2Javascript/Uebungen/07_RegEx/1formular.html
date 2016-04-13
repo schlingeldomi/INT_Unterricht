@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>1.Formular - Felderprüfen</title>
+  <link type="text/css" rel="stylesheet" href="../all.css">
+  <base target="_blank">
+</head>
+<body>
+<form method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" name="Kontakt" onsubmit="return pruefen();">
+
+ Dein Name:<br>
+ <input type="text" name="eingabefeld" size="30"><br>
+
+ Deine eMail-Adresse*:<br>
+ <input type="text" name="eMail" size="30"><br>
+
+ Deine Telefonnummer:<br>
+ <input type="text" name="telefon" size="30"><br>
+
+ Passwort- / Spamschutz*:<br>
+ Bitte gib <i>trowssap</i> ein<br>
+ <input type="password" name="onlex_password" size="30" maxlength="15"><br>
+
+ <input type="submit" name="Senden" value="Daten absenden">
+
+ </form>
+ </body>
