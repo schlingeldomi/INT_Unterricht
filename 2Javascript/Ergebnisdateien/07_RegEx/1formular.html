@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>1.Formular - Felderprüfen</title>
+  <link type="text/css" rel="stylesheet" href="../all.css">
+  <base target="_blank"><script type="text/javascript">
+ <!--
+ function pruefen(){
+ var f = document.Kontakt;
+ var fehler = "";
+
+ if (f.eMail.value == ""){
+ fehler += "- deine eMail-Adresse\n";
+ }
+
+ if (f.telefon.value == ""){
+ fehler += "- deine Telefonummer\n";
+ } else {
+	for (var i = 0; i < f.telefon.value.length; i++) {
+		if ((f.telefon.value.charAt(i) > "9" || f.Telefon.value.charAt(i) < "0") &&
+		f.telefon.value.charAt(i) != "/" &&
+		f.telefon.value.charAt(i) != " " &&
+		f.telefon.value.charAt(i) != "-" &&
+		f.telefon.value.charAt(i) != "+" &&
+		f.telefon.value.charAt(i) != ")" &&
+		f.telefon.value.charAt(i) != "(" {
+			fehler += "\t- korrekte Telefonnummer\n";
+			break;
+		}
+	}
+ }
+
+
+ if (f.onlex_password.value == ""){
+ fehler += "- Anti-Spam-Kontrolle\n";
+ }
+
+ if (fehler != ""){
+	var fehlertext = "Die folgenden Felder wurden nicht vollständig ausgefüllt:\n\n";
+	fehlertext += fehler;
+	alert(fehlertext + "\nBitte füll die Informationen noch aus. Danke.");
+	return false;
+ }
+ return true;
+ }
+ //-->
+ </script>
+ </head>
+<body>
+<form method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" name="Kontakt" onsubmit="return pruefen();">
+
+ Dein Name:<br>
+ <input type="text" name="eingabefeld" size="30"><br>
+
+ Deine eMail-Adresse*:<br>
+ <input type="email" name="eMail" size="30"><br>
+
+ Deine Telefonnummer:<br>
+ <input type="text" name="telefon" size="30"><br>
+
+ Passwort- / Spamschutz*:<br>
+ Bitte gib <i>trowssap</i> ein<br>
+ <input type="password" name="onlex_password" size="30" maxlength="15"><br>
+
+ <input type="submit" name="Senden" value="Daten absenden">
+
+ </form>
+ </body>
