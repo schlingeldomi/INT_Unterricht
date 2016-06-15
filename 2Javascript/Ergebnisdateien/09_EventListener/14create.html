@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myDIV {
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+
+<b id="fett">Hier ist ein Element in einem anderen Element geschachtelt </br>
+     <!--- Hier im b Element vor a Element wird neuer Link eingefügt --> 
+     <a href="http://www.irgendwo.de" id="VorL">Link</a></br>
+</b>
+</br>
+<!-- Aufgabe: Füge neuen Link hier ein. --> 
+</br><button onclick="myFunction()">Link einfuegen ... </button>
+<script>
+function myFunction() {
+    var neuerLink = document.createElement("a");  
+    neuerLink.href = "http://www.teia.de";  
+    neuerLink.innerHTML = "Von JS erzeugter Link.";   
+    neuerLink.style.color = "#FF0000";
+    //var anders = document.getElementById("VorL");
+	//var vorhanden = document.getElementById("fett");
+	//vorhanden.insertBefore(neuerLink, anders);
+	// Vor dem Link mit id=VorL 
+	var but = document.getElementsByTagName("button")[0];
+	document.body.insertBefore(neuerLink, but);
+}
+</script>
+
+</body>
+</html>

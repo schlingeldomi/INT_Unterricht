@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+   <title>quiz</title>
+<script language="JavaScript">
+	var richtig = 0;
+	var falsch = 0;
+	function r(){
+		alert("r");
+		if (this.checked == true){
+			richtig--;
+		} else {
+			richtig++;
+		}
+		window.document.forms[0].elements[0].value = richtig;
+		// window.document.getElementsByName("richtig")[0].value = richtig;
+	}
+	function f(){
+		alert("f");
+		falsch++;
+		window.document.forms[0].elements[1].value = falsch;
+		// window.document.getElementsByName("falsch")[0].value = falsch;
+	}
+	function check() {
+	    var r_count = 0;
+		var f_count = 0;
+		var checked_list = window.document.getElementsByTagName("input");
+		
+		for ( var i = 0; i < checked_list.length; i++) {
+			if (checked_list[i].type == "radio"){
+				if (checked_list[i].checked == true){
+			
+					if (checked_list[i].id == "richtig"){
+						r_count++;
+					} else {
+						f_count++;
+					}
+				} 
+			}
+		}
+		window.document.forms[0].elements[0].value = r_count;
+		window.document.forms[0].elements[1].value = f_count;
+	}
+</script>
+</head>
+<body text="#000000" bgcolor="#66DDDD" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<h2>Javascript Quiz von der ITV12</h2>
+<p><form name = "test" onchange="check()">
+<br>Richtig: <input size=3 name="richtig" value=0> Falsch: <input size=3 name="falsch" value=0>
+<br>
+<h3>
+Welches Getriede hat die l&auml;ngsten Grannen ?</h3>
+<input type="radio" name="f1" id="falsch">Roggen
+<br><input type="radio" name="f1" id="falsch" >Hafer
+<br><input type="radio" name="f1" id="richtig">Gerste
+<br><input type="radio" name="f1" id="falsch">Weizen
+<h3>
+Aus welcher der folgenden Fr&uuml;chte wird Bier gebraut?</h3>
+<input type="radio" name="f4" onClick="f(' ')">Karotten
+<br><input type="radio" name="f4" onClick="r(' ')">Gerste
+<br><input type="radio" name="f4" onClick="f(' ')">Kartoffeln
+<br><input type="radio" name="f4" onClick="f(' ')">Zwiebeln
+<br><input type="radio" name="f4" onClick="f(' ')">Hafer
+<br><input type="radio" name="f4" onClick="f(' ')">Raps
+<h3>
+Von wem und wo wurde der Mais als erstes angebaut ?</h3>
+<input type="radio" name="f2" onClick="f(' ')">R&ouml;mer in Iberien
+<br><input type="radio" name="f2" onClick="r('  und die Spanier brachten ihn nach Europa')">Inkas
+in S&uuml;damerika
+<br><input type="radio" name="f2" onClick="f(' ')">Gallier in der Provence
+<br><input type="radio" name="f2" onClick="f(' ')">&Auml;gypter am Nil
+<h3>
+Wodurch vermehrt man die Kartoffel ?</h3>
+<input type="radio" name="f3" onClick="f(' ')">Ableger
+<br><input type="radio" name="f3" onClick="f(' ')">Samen
+<br><input type="radio" name="f3" onClick="r(': in die Erde stecken')">Knolle
+<br><input type="radio" name="f3" onClick="f(' ')">Fr&uuml;chte
+<br>&nbsp;
+<h3>
+Von wem und wo wurde die Kartoffel als erstes angebaut ?</h3>
+<input type="radio" name="f5" onClick="f(' ')">R&ouml;mer in Sizilien
+<br><input type="radio" name="f5" onClick="r('  und die Spanier brachten sie nach Europa')">Inkas
+in Peru (S&uuml;damerika)
+<br><input type="radio" name="f5" onClick="f(' ')">Gallier in Frankreich
+<br><input type="radio" name="f5" onClick="f(' ')">Germanen in Preu&szlig;en
+<p></form>
+</body>
+</html>

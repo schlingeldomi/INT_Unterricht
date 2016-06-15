@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+#myDIV {
+    border: 1px solid black;
+    margin-bottom: 10px;
+  }
+  </style>
+</head>
+<body>
+  <p>Click auf den Button um ein P Element mit Text vor das DIV anzuhängen.</p>
+  <!-- Hier wird Element P eingebaut -->
+  <div id="myDIV">
+    Ein DIV Element
+  </div><button onclick="myFunction()">Try it</button> 
+  <script>
+    function myFunction() {
+		var para = document.createElement("P");
+		var t = document.createTextNode("This is a paragraph.");
+		para.appendChild(t);
+		var vorD = document.getElementById("myDIV");
+		document.body.insertBefore(para, vorD);
+  }
+  </script>
+</body>
+</html>
