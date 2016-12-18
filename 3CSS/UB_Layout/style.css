@@ -1,0 +1,49 @@
+#wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: url(bilder/durchsichtig8.png);
+  background-repeat: repeat-y;
+  margin: auto;
+  margin-left: 200px;
+  width: 82%;
+}
+aside {
+  order: 1;
+  align-self: flex-start;
+}
+#steuerungoben {
+  text-align:center;
+  padding-left
+  : 100px;
+}
+aside,
+#steuerunglinks {
+  flex: 1 0%;
+}
+section {
+  flex: 2 0%;
+  align-self: flex-start;
+}
+body {
+  background-image: url(bilder/duene.jpg);
+}
+header {
+  background-image: url(bilder/wuestenlaeufer-1-ohr.png);
+  height: 151px;
+  width: 60%;
+  text-align: right;
+  margin-left: 300px; 
+  margin-right: 100px;
+}
+#logotext {
+  padding-top: 30px;
+}
+aside p {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+h1,strong {
+  font-size: 30px;
+}
