@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <h1>Übung 4: Ein HTML Eingabeformular</h1>
+  <form name="formular" action=...>
+  <div id="bezeichner">
+	Vorname  <br>
+	Nachname <br>
+	Jahrgang <br>
+	Lieblingsfarbe <br>
+  </div>
+  <div id="felder">
+	<input name="vorname" type=text size=50 maxlength=50><br>
+	<input name="nachname" type=text size=50 maxlength=50><br>
+	<input name="jahrgang" type=number size=4 maxlength=4 value=1990><br>
+    <select name="lieblingsfarbe">
+       <option value=rot>Rot</option>
+       <option value=Grün>Grün</option>
+       <option value=Blau>Blau</option>
+       <option value=Gelb>Gelb</option>
+       <option value=Weiß>Weiß</option>
+       <option value=Schwarz>Schwarz</option>
+      </select><br>
+   </div>
+   <div id="ruhetage"> Ruhetage <br></div>
+   <div id="tage">
+       <input type="checkbox" name="ruhetage" value="Montag"> Montag<br>
+       <input type="checkbox" name="ruhetage" value="Dienstag"> Dienstag<br>
+       <input type="checkbox" name="ruhetage" value="Mittwoch"> Mittwoch<br>
+       <input type="checkbox" name="ruhetage" value="Donnerstag"> Donnerstag<br>
+       <input type="checkbox" name="ruhetage" value="Freitag"> Freitag<br>
+       <input type="checkbox" name="ruhetage" value="Samstag"> Samstag<br>
+       <input type="checkbox" name="ruhetage" value="Sonntag"> Sonntag<br>
+  </div>
+  <div id="lieblingstage">Lieblingstag <br></div>
+  <div id="ltage">
+       <input type="radio" name="lieblingstag" value="Montag"> Montag<br>
+       <input type="radio" name="lieblingstag" value="Dienstag"> Dienstag<br>
+       <input type="radio" name="lieblingstag" value="Mittwoch"> Mittwoch<br>
+       <input type="radio" name="lieblingstag" value="Donnerstag"> Donnerstag<br>
+       <input type="radio" name="lieblingstag" value="Freitag"> Freitag<br>
+       <input type="radio" name="lieblingstag" value="Samstag"> Samstag<br>
+       <input type="radio" name="lieblingstag" value="Sonntag"> Sonntag<br>
+  </div>
+  <p id="kommentar">Kommentar</p>
+      <textarea name=kommentar cols=40 rows=5>Ich finde dieses Formular toll...</textarea><br>
+	  <input type=reset value="Alles löschen"> 
+      <input type=submit value="Abschicken">
+  </form>
+  </body>
+  </html>
+
+</html>
