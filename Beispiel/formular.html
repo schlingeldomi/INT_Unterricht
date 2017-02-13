@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style type="text/css">
+    .flex-container {
+      display: flex;
+    }
+    .flex-item {
+      flex-basis: 25%;
+      margin: 1%;
+    }
+    .first {
+      flex-basis:10%;
+    }
+  </style>
+</head>
+
+<body>
+  <p> Mit dem Formular werden die ..</p>
+  <p> Bitte ..</p>
+  <form>
+    <div class="flex-container">
+      <select name="kraftstoff" id="kraftstoff" class="flex-item first ">
+        <option value="S"> Super</option>
+        <option value="D"> Diesel</option>
+      </select>
+      <label for="kraftstoff" class="flex-item"> Kraftstoff</label>
+    </div>
+    <div class="flex-container">
+      <select name="tankmonat" id="monat" class="flex-item first">
+        <option value="1"> Januar</option>
+        <option value="2"> Februar</option>
+      </select>
+      <label for="monat" class="flex-item"> Tankmonat</label>
+    </div>
+    <div class="flex-container">
+      <h4 class="flex-item  first ">Nr</h4>
+      <h4 class="flex-item">Tankfüllung</h4>
+      <h4 class="flex-item">Zahlbetrag</h4>
+    </div>
+    <div class="flex-container">
+      <p class="flex-item  first "> 1. </p>
+      <label class="flex-item">
+        <input type="text" name="Tankfuellung1" value="0"> l </label>
+      <label class="flex-item">
+        <input type="text" name="Zahlbetrag1" value="0.00"> Euro </label>
+    </div>
+     <div class="flex-container">
+      <p class="flex-item  first "> 2. </p>
+      <label class="flex-item">
+        <input type="text" name="Tankfuellung2" value="0"> l </label>
+      <label class="flex-item">
+        <input type="text" name="Zahlbetrag2" value="0.00"> Euro </label>
+    </div>
+     <div class="flex-container">
+      <p class="flex-item  first "> 3. </p>
+      <label class="flex-item">
+        <input type="text" name="Tankfuellung3" value="0"> l </label>
+      <label class="flex-item">
+        <input type="text" name="Zahlbetrag3" value="0.00"> Euro </label>
+    </div>
+     <div class="flex-container">
+      <p class="flex-item  first "> 4. </p>
+      <label class="flex-item">
+        <input type="text" name="Tankfuellung4" value="0"> l </label>
+      <label class="flex-item">
+        <input type="text" name="Zahlbetrag4" value="0.00"> Euro </label>
+    </div>
+    <input type="button" value="berechnen ohne Mwst">
+    <input type="reset" value="zurücksetzen">
+    <input type="button" value="berechnen + Mwst">
+    
+  </form>
+</body>
+
+</html>
