@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .flex-container {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 5px;
+      //background: lightblue;
+    }
+    
+    .flex-item {
+      flex: 0 8%;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      //background: blue;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <h1>Übung 4: Ein HTML Eingabeformular</h1>
+  <form name="formular" action=...>
+    <div class="flex-container">
+      <div class="flex-item">
+        Vorname
+      </div>
+      <div class="flex-item">
+        <input class="vorname" name="vorname" type=text size=50 maxlength=50>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="flex-item">
+        Nachname
+      </div>
+      <div class="flex-item">
+        <input class="nachname" name="nachname" type=text size=50 maxlength=50>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="flex-item">
+        Jahrgang
+      </div>
+      <div class="flex-item">
+        <input class="jahrgang" name="jahrgang" type=number size=4 maxlength=4 value=1990>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="flex-item">
+        Lieblingsfarbe
+      </div>
+      <div class="flex-item">
+        <select class="lieblingsfarbe" name="lieblingsfarbe" class="flex-item">
+          <option value=rot>Rot</option>
+          <option value=Grün>Grün</option>
+          <option value=Blau>Blau</option>
+          <option value=Gelb>Gelb</option>
+          <option value=Weiß>Weiß</option>
+          <option value=Schwarz>Schwarz</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="flex-item">
+        Ruhetage
+      </div>
+      <div class="flex-item">
+        <label>
+          <input type="checkbox" name="ruhetage" value="Montag"> Montag </label>
+        <label>
+          <input type="checkbox" name="ruhetage" value="Dienstag"> Dienstag </label>
+        <label>
+          <input type="checkbox" name="ruhetage" value="Mittwoch"> Mittwoch </label>
+        <label>
+          <input type="checkbox" name="ruhetage" value="Donnerstag"> Donnerstag </label>
+        <label>
+          <input type="checkbox" name="ruhetage" value="Freitag"> Freitag </label>
+        <label>
+          <input type="checkbox" name="ruhetage" value="Samstag"> Samstag </label>
+        <label>
+          <input type="checkbox" name="ruhetage" value="Sonntag"> Sonntag </label>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="flex-item">
+        Lieblingstag
+      </div>
+      <div class="flex-item">
+        <label>
+          <input type="radio" name="lieblingstag" value="Montag"> Montag </label>
+        <label>
+          <input type="radio" name="lieblingstag" value="Dienstag"> Dienstag </label>
+        <label>
+          <input type="radio" name="lieblingstag" value="Mittwoch"> Mittwoch </label>
+        <label>
+          <input type="radio" name="lieblingstag" value="Donnerstag"> Donnerstag </label>
+        <label>
+          <input type="radio" name="lieblingstag" value="Freitag"> Freitag </label>
+        <label>
+          <input type="radio" name="lieblingstag" value="Samstag"> Samstag </label>
+        <label>
+          <input type="radio" name="lieblingstag" value="Sonntag"> Sonntag </label>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="flex-item">
+        <label for="kommentar" class="flex-item">Kommentar </label>
+      </div>
+      <div class="flex-item">
+        <textarea class="kommentar" name="kommentar" cols=40 rows=5 class="flex-item">Ich finde dieses Formular toll...</textarea>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <div class="flex-item">
+        <input type=reset value="Alles löschen">
+      </div>
+      <div class="flex-item">
+        <input type=submit value="Abschicken">
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
