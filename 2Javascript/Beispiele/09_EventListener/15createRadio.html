@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Klick auf den Button um Elemente zu erzeugen</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    // Fragment erzeugen
+    var frag = document.createDocumentFragment();
+	
+	// Break erzeugen
+	var br1 = document.createElement("br");
+	frag.appendChild(br1);
+	var br1 = document.createElement("br");
+	frag.appendChild(br1);
+	
+	// Text erzeugen
+	var t2 = document.createTextNode("richtig: ");
+	frag.appendChild(t2);
+		
+    // Radio Button 		
+	var r1 = document.createElement("INPUT");
+	r1.setAttribute("type", "radio");
+	r1.setAttribute("name", "bool");
+	frag.appendChild(r1);
+	
+	// Text erzeugen
+	var t3 = document.createTextNode("falsch: ");
+	frag.appendChild(t3);
+	
+	// Radio Button
+	var r2 = document.createElement("INPUT");
+	r2.setAttribute("type", "radio");
+	r2.setAttribute("name", "bool");
+	frag.appendChild(r2);
+		
+	//Alles einhängen
+    window.document.body.appendChild(frag);
+}
+</script>
+
+</body>
+</html>

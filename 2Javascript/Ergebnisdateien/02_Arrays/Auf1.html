@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Aufgaben</title>
+</head>
+
+<body>
+  <h1>Aufgabe1 Quadratzahlen</h1>
+  <pre>
+<script language="JavaScript" type="text/javascript">
+    var zahlen = [];
+	for (var x = 0; x < 10 ; x++){
+		zahlen.push(x*x);  //zahlen[x] = x*x;
+		document.writeln("Quadratzahl:", x * x);
+	}
+    document.writeln("Array:", zahlen);
+	document.writeln("<h2>Aufgabe2 Zeichenfolge</h2>");
+	
+	var zeichenfolgen = [];
+	for (var i = 0; i < 10; i++){
+		zeichenfolgen[zeichenfolgen.length] = i;
+	}
+	document.writeln("Array:", zeichenfolgen);
+	var string = "";
+	for (var i = 0; i < zeichenfolgen.length; i++){
+		document.writeln (string += zeichenfolgen[i]);
+	}
+   
+</script>
+</pre>
+</body>
+</html>

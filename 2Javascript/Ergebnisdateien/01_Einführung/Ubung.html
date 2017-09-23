@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+  <title>Übung</title>
+</head>
+
+<body>
+  <h1>Glückzahlen</h1>
+  <pre>
+<script language="JavaScript" type="text/javascript">
+
+	window.status='Herzlich Willkommen!'
+
+
+    var name = prompt("Bitte einen Namen eingeben:","");
+	var s = "GutenMorgen:" + name;
+	s = s.fontsize(16);
+	document.writeln ( s );
+	
+	var l = name.length;
+	var zahlen = new Array;
+	
+	document.writeln ( ("Länge des Names:" + l).fontsize(16) );
+	document.write ( "Deine persönlichen Glückzahlen für heute:");
+
+	for (var i= 0; i<4; i++){
+		zahlen[i] = Math.round(Math.random() * 48 + 1);
+		
+		document.write( zahlen[i]+ ', ');
+	}
+	document.write(Math.round(Math.random() * 48 + 1) + ' und ');
+	document.write(Math.round(Math.random() * 48 + 1));
+</script>
+</pre>
+<noscript>Ihr Browser kann keine JavaScript-Programme
+ausführen. Aus diesem Grund sehen Sie hier nichts. :-(</noscript>
+</body>
+</html>

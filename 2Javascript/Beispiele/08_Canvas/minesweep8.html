@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+	 body {margin:0;}
+	</style>
+	<script>
+	var c;
+	var box;
+	var num;
+	var zero;
+	var width= 30;
+	var height=30;
+	var zeilen=10;
+	var spalten=10;
+	var bombs = [];
+	window.onload = function (){
+		var can = document.getElementById("myCanvas");
+		c = can.getContext("2d");
+		init();
+	};
+	function init(){
+		box = new Image();
+		box.src = "box.png";
+		num = new Image();
+		zero = new Image();
+		for (var i=1; i<= 10 ; i++){
+		bombs[i]= [
+				Math.ceil(Math.random() * 10),
+				Math.ceil(Math.random() * 10)
+				];
+		}
+		drawCanvas();
+	};
+	function drawCanvas(){
+		c.clearRect(0,0,400,400);
+		var width= 30;
+		var height=30;
+		var zeilen=10;
+		var spalten=10;
+		for (i=0; i<zeilen; i++){
+			for (j=0; j<spalten; j++){
+				x= i*width;
+				y= j*height;
+			c.drawImage(box,x,y);
+			}
+		}
+	};
+	var mX;
+	var mY;
+	window.onclick = function(e){
+		mX = e.pageX;
+		mY = e.pageY;
+		var Okay = 1;
+		var spalte = Math.ceil(mX/width);
+		var reihe = Math.ceil(mY/height);
+		for (var i=1; i<= 10 ; i++) {
+			if (reihe == bombs[i][0] && spalte == bombs[i][1]) {
+				Okay = 0;
+				alert("Verloren- Reihe:" + bombs[i][0] + "Spalte:" + bombs[i][1]);
+			}
+		}
+		if (Okay) {
+			clickOK(reihe,spalte);
+		}
+	};
+	var anzBombs=[];
+	function clickOK(r,s){
+		var anzahl = 0;
+		anzahl += checkBomb(r-1,s-1);
+		anzahl += checkBomb(r-1,s);
+		anzahl += checkBomb(r-1,s+1);
+		anzahl += checkBomb(r,s-1);
+		anzahl += checkBomb(r,s+1);
+		anzahl += checkBomb(r+1,s-1);
+		anzahl += checkBomb(r+1,s);
+		anzahl += checkBomb(r+1,s+1);
+		if (anzahl > 0){
+			anzBombs.push(r,s,anzahl);
+		}
+	};
+	function checkBomb(r,s){
+		for (var i=1; i<= 10 ; i++) {
+			if (r == bombs[i][0] && s == bombs[i][1]) {
+				return 1;
+			}
+		}
+		return 0;
+	};
+    </script>
+</head>
+<body>
+	<div id="control">
+	</div>
+	<div>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+	</div>
+</body>
+</html>

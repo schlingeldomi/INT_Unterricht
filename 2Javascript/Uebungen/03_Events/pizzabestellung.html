@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Pizzabestellung</title>
+  <style type="text/css">
+      body { zoom:2;}
+      body,td { font:10pt Verdana,Arial,sans-serif;}
+  </style>
+  <script type="text/javascript">
+  function werteaus()
+  {
+	var text = "Ihre Pizza ist " ;
+	text += document.Pizzaform.size.value;
+	text +="\nund hat folgende Art: ";
+	text += document.Pizzaform.pizza.value;
+	
+
+	if (document.Pizzaform.pizza.value == "individuell" )
+	{
+		text +="\nund folgende Extras: ";
+		var checkboxes = document.getElementsByName('zutaten');
+		for (var i=0; i< checkboxes.length; i++)
+		{
+			if (checkboxes[i])
+			{
+			
+			}
+	}
+	
+	alert(text);
+  }   
+  </script>
+
+</head>
+<body>
+ 
+  <h2>WWW-Pizza-Service</h2>
+  <form action="" name="Pizzaform" onsubmit="werteaus()">
+    <p>Bestellen Sie eine fertige Pizza, oder stellen Sie eine Pizza<br>ganz nach Ihren Wünschen zusammen. Wir liefern alles.</p>
+    <table summary="Tabelle zur formatierten Anzeige" border="0">
+      <tr>
+        <td bgcolor="#EEE8AA">Größe:</td>
+        <td bgcolor="#EEE8AA">
+        <input type="radio" name="size" value="klein">klein (20 cm)<br>
+        <input type="radio" name="size" value="mittel">mittel (26 cm)<br>
+        <input type="radio" name="size" value="groß">groß (32 cm)</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFACD">Art der Pizza:</td>
+        <td bgcolor="#FFFACD">
+          <input type="radio" name="pizza" value="Tonno">Tonno (Thunfisch, Zwiebel, Knoblauch)<br>
+          <input type="radio" name="pizza" value="Quattro">Quattro (Salami, Schinken, Paprika, Champions)<br>
+          <input type="radio" name="pizza" value="Italia">Italia (Schinken, Artischocke, Zwiebel)<br>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td bgcolor="#EEE8AA">
+          <input type="radio" name="pizza" value="individuell">individuelle Zusammenstellung<br>
+          <input type="checkbox" name="zutat" value="Salami">Salami<br>
+          <input type="checkbox" name="zutat" value="Schinken">Schinken<br>
+          <input type="checkbox" name="zutat" value="Champignons">Champignons<br>
+          <input type="checkbox" name="zutat" value="Käse">Käse<br>
+          <input type="checkbox" name="zutat" value="Peperoni">Peperoni<br>
+          <input type="checkbox" name="zutat" value="Knoblauch">Knoblauch
+        </td>
+      </tr>
+    </table>
+    <p>
+    <input type="submit" value="Abschicken">
+    <input type="reset" value="Zurücksetzen"></p>
+  </form>
+</body>
+</html>

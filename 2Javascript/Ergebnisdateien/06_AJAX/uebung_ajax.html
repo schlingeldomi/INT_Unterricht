@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Text nachträglich laden</title>
+<script type="text/javascript">
+	var xhttp;
+	if (window.XMLHttpRequest) {				
+		xhttp = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+	
+//xhttp.open("GET", "http://127.0.0.1:8080/datei.txt" , true);
+xhttp.open("GET", "http://localhost:8080/datei.txt" , true);
+	xhttp.onreadystatechange = antwortVerarbeiten;
+	xhttp.send();
+	
+	function antwortVerarbeiten(){
+		if (xhttp.readyState == 4 && xhttp.status == 200){
+			document.getElementById("textstelle").innerHTML = xhttp.responseText;
+		} else {
+			alert(xhttp.statusText);
+		}
+	}
+</script>
+</head>
+<body>
+  <h2>Ajax - Text laden</h2>
+  <p>Der nachfolgende Text wird dynamisch nach dem Laden der Webseite geladen 
+     und angezeigt.</p>
+  <div id="textstelle">Dieser Text wird ausgetauscht...</div>
+  <div id="status">Statusausgabe</div>
+</body>
+</html>
