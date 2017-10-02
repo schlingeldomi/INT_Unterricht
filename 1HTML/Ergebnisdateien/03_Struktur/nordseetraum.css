@@ -1,5 +1,10 @@
 body   {
 	font-family: Arial; 
+	background-image: url("background.jpeg");
+	background-position: top left;
+	background-repeat: repeat-y;
+	margin: auto;
+	max-width: 1000px;
 }
 p {
 	color: #003366; 
@@ -23,9 +28,5 @@ img {
 }
 #para {
 	padding: 20px;
-}
-#scroll {
-	height: 500px;
-	overflow: auto;
 }
 
