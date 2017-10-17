@@ -3,7 +3,7 @@ body   {
 	background-image: url("background.jpeg");
 	background-position: top left;
 	background-repeat: repeat-y;
-	margin: auto;
+	margin: 100px;
 	max-width: 1000px;
 }
 p {
