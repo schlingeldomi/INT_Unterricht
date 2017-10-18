@@ -1,15 +1,18 @@
-Wüstenläufer
-"kontakt.htm">Kontakt
-"impressum.htm">Impressum
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<a href="kontakt.htm">Kontakt</a>
+<a href="impressum.htm">Impressum</a>
 
 <a href"index.htm">Startseite</a>
-<a href="vorstellung.htm">Vorstellung
+<a href="vorstellung.htm">Vorstellung</a>
 <a href="einzelteile.htm">Einzelteile</a>
  
 <a href="index.htm">Startseite</a>
-<a href="vorstellung.htm">über diese Website
+<a href="vorstellung.htm">über diese Website</a>
 
-<a href="einzelteile.htm">Einzelteile</a></li>
+<a href="einzelteile.htm">Einzelteile</a>
 <a href="design-verwenden.htm">Design verwenden</a>
 
 Bildersammlung:
@@ -25,6 +28,10 @@ Lebt gerne im Sand sprich in Wüsten und schläft tagsüber.
  
 Mahlzeiten des Fennek
 Zu der Nahrung der Fenneks zählen:
+
+häufig
+mäßig
+in Gefangenschaft
   
 Mäuse
 Heuschrecken
