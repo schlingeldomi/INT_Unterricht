@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> 2 Spaltenlayout - Mittig  - mit Kopf und Fuss</title>
+<style>
+#seitenbereich {
+  margin: 0 auto;   /* Zentrierung mitte */
+  width: 780px;
+  background-color:silver;
+}
+
+#kopfzeile {
+  background-color:lightskyblue;
+  border-bottom:1px solid black;
+}
+#fusszeile {
+  clear: both;
+  background-color:lightskyblue;
+  border-top:2px solid black;
+}
+
+#navi {
+  float:left;
+  width:13em;
+  background-color:thistle;
+}
+#inhalte {
+  margin-left: 14em;
+  background-color:lightblue;
+}
+</style>
+</head>
+<body>
+<div id="seitenbereich">
+
+  <div id="kopfzeile">
+    Kopfzeilen 
+  </div>
+
+  <div id="navi">
+    <ul>
+      <li>Startseite</li>
+      <li>Impressum</li>
+    </ul>
+  </div>
+
+  <div id="inhalte">
+    Hier HTML und CSS lernen und die
+    eigene Website erstellen - selbst ist der Mensch
+  </div>
+
+  <div id="fusszeile">
+    Fusszeilen 
+  </div>
+</div>
+</body>
+</html>
