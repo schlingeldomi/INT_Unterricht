@@ -3,28 +3,49 @@
 
 <head>
   <meta charset="utf-8">
+  <style>
+     //div { margin-top: 8px;}
+	.divlabel, .divinput{ float: left; }
+	label { margin-top: 12px; }
+	input { margin-top: 2px;}
+	.seperate {clear:both;}
+	#ruhetage, #lieblingstage{ margin-left: 15px;}
+	#labelruhe, #labelliebling  { min-width: 6%;}
+  </style>
 </head>
 
 <body>
   <h1>Übung 4: Ein HTML Eingabeformular</h1>
   <form name="formular" action=...>
-    <label for="vorname"> Vorname </label>
-    <input id="vorname" name="vorname" type=text size=50 maxlength=50>
-    <label for="nachname"> Nachname </label>
-    <input id="nachname" name="nachname" type=text size=50 maxlength=50>
-    <label for="jahrgang"> Jahrgang </label>
-    <input id="jahrgang" name="jahrgang" type=number size=4 maxlength=4 value=1990>
-    <label for="lieblingsfarbe"> Lieblingsfarbe </label>
-    <select id="lieblingsfarbe" name="lieblingsfarbe">
-      <option value=rot>Rot</option>
-      <option value=Grün>Grün</option>
-      <option value=Blau>Blau</option>
-      <option value=Gelb>Gelb</option>
-      <option value=Weiß>Weiß</option>
-      <option value=Schwarz>Schwarz</option>
-    </select>
-    <label for="ruhetage"> Ruhetage </label>
-    <div id="ruhetage">
+    <div class="divlabel"> 
+		<label for="vorname"> Vorname </label><br>
+		<label for="nachname"> Nachname </label><br>
+		<label for="jahrgang"> Jahrgang </label>
+	</div>
+	<div id="divinput">
+		<input id="vorname" name="vorname" type=text size=50 maxlength=50><br>
+		<input id="nachname" name="nachname" type=text size=50 maxlength=50><br>
+		<input id="jahrgang" name="jahrgang" type=number size=4 maxlength=4 value=1990><br>
+	</div>
+	<div class="seperate"></div>
+	<div class="divlabel">
+		<label for="lieblingsfarbe"> Lieblingsfarbe </label>
+	</div>
+	<div class="divinput">
+		<select id="lieblingsfarbe" name="lieblingsfarbe">
+			<option value=rot>Rot</option>
+			<option value=Grün>Grün</option>
+			<option value=Blau>Blau</option>
+			<option value=Gelb>Gelb</option>
+			<option value=Weiß>Weiß</option>
+			<option value=Schwarz>Schwarz</option>
+		</select>
+	</div>
+	<div class="seperate"></div>
+	<div class="divlabel" id="labelruhe">
+		<label for="ruhetage"> Ruhetage </label>
+	</div>
+    <div class="divinput" id="ruhetage">
       <input type="checkbox" name="ruhetage" value="Montag"> Montag
       <br>
       <input type="checkbox" name="ruhetage" value="Dienstag"> Dienstag
@@ -40,8 +61,11 @@
       <input type="checkbox" name="ruhetage" value="Sonntag"> Sonntag
       <br>
     </div>
-    <label for="lieblingstage">Lieblingstag </label>
-    <div id="lieblingstage">
+	<div class="seperate"></div>
+	<div class="divlabel" id="labelliebling">
+		<label for="lieblingstage">Lieblingstag </label>
+	</div>
+    <div class="divinput" id="lieblingstage">
       <input type="radio" name="lieblingstag" value="Montag"> Montag
       <br>
       <input type="radio" name="lieblingstag" value="Dienstag"> Dienstag
@@ -57,8 +81,9 @@
       <input type="radio" name="lieblingstag" value="Sonntag"> Sonntag
       <br>
     </div>
+	<div class="seperate"></div>
     <label for="kommentar">Kommentar</p>
-      <textarea id="kommentar" name="kommentar" cols=40 rows=5>Ich finde dieses Formular toll...</textarea>
+      <textarea id="kommentar" name="kommentar" cols=40 rows=5>Ich finde dieses Formular toll...</textarea><br>
       <input type=reset value="Alles löschen">
       <input type=submit value="Abschicken">
   </form>
