@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+     div { margin-top: 8px;}
+	label { margin-top: 12px; float: left; width: 9%}
+	#vorname,#nachname,#jahrgang,#lieblingsfarbe  { margin-top: 12px; float: left; }
+	.seperate {clear:both;}
+	#ruhetage, #lieblingstage { margin-left: 9%;margin-top:12px;}
+    .button { float: left; width:100px}
+  </style>
+</head>
+
+<body>
+  <h1>Übung 4: Ein HTML Eingabeformular</h1>
+  <form name="formular" action=...>
+      <div>
+          <label for="vorname"> Vorname </label>
+          <input id="vorname" name="vorname" type=text size=50 maxlength=50>
+      </div>
+      <div class=seperate></div>
+      <div> 
+		    <label for="nachname"> Nachname </label>
+        <input id="nachname" name="nachname" type=text size=50 maxlength=50>
+      </div>
+      <div class=seperate></div>
+      <div>
+		     <label for="jahrgang"> Jahrgang </label>
+		     <input id="jahrgang" name="jahrgang" type=number size=4 maxlength=4 value=1990>
+      </div>
+      <div class=seperate></div>
+      <div>
+		     <label for="lieblingsfarbe"> Lieblingsfarbe </label>
+		     <select id="lieblingsfarbe" name="lieblingsfarbe">
+		       	<option value=rot>Rot</option>
+			      <option value=Grün>Grün</option>
+			      <option value=Blau>Blau</option>
+			      <option value=Gelb>Gelb</option>
+			      <option value=Weiß>Weiß</option>
+			      <option value=Schwarz>Schwarz</option>
+		    </select>
+	   </div>
+	   <div class="seperate"></div>
+	   <div class="divlabel" id="labelruhe">
+		    <label for="ruhetage"> Ruhetage </label>
+        <div id="ruhetage">   
+           <input type="checkbox" name="ruhetage" value="Montag" class="ip"> Montag<br>
+           <input type="checkbox" name="ruhetage" value="Dienstag" class="ip"> Dienstag<br>
+           <input type="checkbox" name="ruhetage" value="Mittwoch" class="ip"> Mittwoch<br>
+           <input type="checkbox" name="ruhetage" value="Donnerstag" class="ip"> Donnerstag<br>
+           <input type="checkbox" name="ruhetage" value="Freitag" class="ip"> Freitag<br>
+           <input type="checkbox" name="ruhetage" value="Samstag" class="ip"> Samstag<br>
+           <input type="checkbox" name="ruhetage" value="Sonntag" class="ip"> Sonntag<br>
+        </div>    
+     </div>
+	   <div class="seperate"></div>
+	   <div class="divlabel" id="labelliebling">
+		      <label for="lieblingstage">Lieblingstag </label>
+	   </div>
+     <div class="divinput" id="lieblingstage">
+       <input type="radio" name="lieblingstag" value="Montag"> Montag<br>
+       <input type="radio" name="lieblingstag" value="Dienstag"> Dienstag <br>
+       <input type="radio" name="lieblingstag" value="Mittwoch"> Mittwoch<br>
+       <input type="radio" name="lieblingstag" value="Donnerstag"> Donnerstag<br>
+       <input type="radio" name="lieblingstag" value="Freitag"> Freitag<br>
+       <input type="radio" name="lieblingstag" value="Samstag"> Samstag<br>
+       <input type="radio" name="lieblingstag" value="Sonntag"> Sonntag<br>
+     </div>
+	   <div class="seperate"></div>
+     <label for="kommentar">Kommentar</label>
+     <textarea id="kommentar" name="kommentar" cols=40 rows=5>Ich finde dieses Formular toll...</textarea><br>
+     <div class="button">
+         <input type=reset value="Alles löschen">
+     </div>
+     <div class="button">
+         <input type=submit value="Abschicken">
+     </div>
+</form>
+</body>
+</html>
