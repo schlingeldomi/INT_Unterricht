@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        div {
+            margin-top: 8px;
+            margin-left: 40px;
+        }
+        
+        input:invalid {
+            color: red;
+        }
+
+        input:valid {
+            color: green;
+        }
+        input{
+            background-color:antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Reguläre Ausdrücke in HTML Eingabeformular</h1>
+    <form name="formular" action="#">
+        <div>
+            <label for="name"> Vollständiger Name: </label><br>
+            <input id="name" name="name" type=text size=50 maxlength=50 
+                   pattern="([A-Z][a-z]* +)+[A-Z][a-z]+">
+        </div>
+        <div class=seperate></div>
+        <div>
+            <label for="email"> Email Adresse </label><br>
+            <input id="email" name="email" type=email size=50 maxlength=50>
+        </div>
+        <div class=seperate></div>
+        <div>
+            <label for="datum"> Datum Anreise </label><br>
+            <input id="datum" name="datum" type=date>
+        </div>
+        <div class=seperate></div>
+        <div>
+            <label for="anzahl"> Anzahl der Übernachtungen <br>
+              (Zimmerpreis 99 US-Dollar pro Nacht)</label><br>
+            <input id="anzahl" name="anzahl" type=text pattern="\d+">
+        </div>
+        <div class="seperate"></div>
+        <div>
+            <label for="anzahlg"> Anzahl der Gäste <br>
+              (jeder zusätzliche Gast wird mit 10 US-Dollar pro Nacht berechnet)</label><br>
+            <input id="anzahlg" name="anzahlg" type=text pattern="\d+">
+        </div>
+        <div class="seperate"></div>
+        <div>
+            <label for="gutschein"> Gutscheincode <br>
+            </label><br>
+            <input id="gutschein" name="gutschein" type=text 
+                   pattern="([a-zA-Z0-9]{4}-){2}[a-zA-Z0-9]{4}">
+        </div>
+        <div class="button">
+            <input type=submit value="Reservierungsanfrage senden">
+        </div>
+    </form>
+</body>
+
+</html>

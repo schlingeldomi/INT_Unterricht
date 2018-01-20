@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <p>Datenbank Tabellenausgabe:</p>
+
+  <?php
+$mysqli = mysqli_connect("localhost", "root", "newpass", "uebung");
+if (mysqli_connect_errno()) {
+    die("Verbindung fehlgeschlagen: " . mysqli_connect_errno());
+ }
+$sql = "SELECT * FROM users";
+if ($result = mysqli_query ($mysqli, $sql))
+{
+  // Fetch one and one row
+  while ($row=mysqli_fetch_assoc($result))
+    {
+       echo "<ol>";
+      $keys = array_keys($row);
+      foreach ($keys as $k)
+      {
+        echo "<li> Spalte: $k - $row[$k] </li>";
+      }
+       echo "</ol>";
+    }
+    // Free result set
+    mysqli_free_result($result);
+} else {
+  echo "Keine Daten";
+}
+
+mysqli_close($mysqli);
+ 
+?>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Datenbank Tabellenausgabe:</p>
+<?php
+
+ $mysqli = mysqli_connect("localhost", "root", "newpass", "uebung");
+ if (mysqli_connect_errno()) {
+    die("Verbindung fehlgeschlagen: " . mysqli_connect_errno());
+  }
+  $sql = "SELECT * FROM users";
+  if ($result = mysqli_query ($mysqli, $sql))
+  {
+    // Fetch one and one row
+    while ($row=mysqli_fetch_row($result))
+    {
+      echo $row[1];
+      echo "<br>";
+    }
+   }
+?>
+</body>
+</html>
