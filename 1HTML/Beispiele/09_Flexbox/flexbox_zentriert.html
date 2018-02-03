@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        .flex-container {
+            padding: 0;
+            margin: 0;
+            list-style: none;  /* Listenpunkt weg */  
+            display: flex;      /* Flexbox Verhalten */
+            flex-direction: row;    /* Elemente in Reihe */
+            flex-wrap: wrap;        /* Umbruch */
+            justify-content: space-around; /* Platz vert.horizontal, wegen 'row' */
+        }
+
+        .flex-item {
+            background: tomato;
+            padding: 5px;
+            width: 200px;
+            height: 150px;      /* height und line-height gleich */
+            margin-top: 10px;
+            line-height: 150px;
+            color: white;
+            font-weight: bold;
+            font-size: 3em;
+            text-align: center;     /* Zentriert horizontal */
+        }
+
+    </style>
+</head>
+
+<body>
+    <ul class="flex-container">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+        <li class="flex-item">6</li>
+    </ul>
+</body>
+
+</html>

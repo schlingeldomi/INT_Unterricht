@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-container {
+  color: #fff;
+  background-color: #5995DA;  	/* Blue */
+  padding: 20px 0;
+  display: flex;				/* a) Flexbox definieren */
+  justify-content:center;		/* b) .menu zentriert  wie mit margin:0 auto */
+}
+
+.menu {
+  border: 1px solid #fff;  			/* Nur zum Debuggen – danach löschen  */
+  width: 900px;
+  display: flex;					/* c) Flexbox in Flexbox */
+  justify-content: space-between; 	/* e) Gruppen an den Rand */
+}
+
+.links {
+  border: 1px solid #fff;  			/* Nur zum Debuggen – danach löschen  */
+  display: flex;					/* f) Elemente von .links nebeneinander */
+  justify-content: flex-end;
+}
+
+.login {
+  margin-left: 20px;
+}
+
+.header-container {
+  color: #5995DA;
+  background-color: #D6E9FE;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  				/* g) cross-axis - Flex-items ausrichten */
+}
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-grid {
+  width: 900px;
+  display: flex;
+  justify-content: center;			/* i) Alle Flex-Items mittig  -> von flex-start auf center */
+  flex-wrap: wrap;					/* h) Zeilenumbruch */
+  /* flex-direction: column-reverse;	 j) Hauptrichtung vertikal */
+  /* align-items: center;				 j) Nebenrichtung (horizontal) mittig */
+  /* flex-direction: row-reverse;		 k) Umgekehrt */ 
+  flex-direction: row;				/* l) wieder zurück setzen */
+  align-items: center;				/* l) wieder zurück setzen */
+}
+
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
+.first-item {						/* l) erstes Element eins nach links  */
+  	order: 1;		
+}
+.last-item {						/* l) letztes Element eins nach rechts  */
+ 	order: -1;
+}
+.social,			
+.subscribe {
+ 	align-self: flex-end;			/* m) setzt diese Flex-Items an die untere Kante */
+ 	margin-bottom: 20px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  border: 1px solid #fff;
+  background-color: #D6E9FE;
+  height: 200px;
+  flex: 1;							/* flex-Item wird auf Breite von .footer gestreckt */
+}
+.footer-three {
+  flex: 2;							/* n) wächst doppelt so schnell */
+}
+.footer-one,						/* o) footer-item 1 und 3 haben fixe Breite */
+.footer-three {
+  background-color: #5995DA;
+  flex: initial;					/* fixe Breite - wächst nicht */
+  width: 300px;
+}
+.signup {							/* p) .signup */
+  margin-left: auto;
+}
