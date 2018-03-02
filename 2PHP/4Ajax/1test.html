@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script> 
+  // Das XMLHttpRequest-Objekt setzen 
+  var xhr = new XMLHttpRequest(); 
+
+  // Beim laden der Seite der ersten Auswahlliste den Event-Handler "change" geben, 
+  // dieser ruft dann (beim auswählen) die Funktion: loadSelection() auf. 
+  window.addEventListener('load', function() { 
+   document.getElementById("selection1").addEventListener("change", loadSelection); 
+
+   // Dem HTML-Button (id="anzeigen") den Event: "click" zuweisen 
+   // Dieser ruft dann die Funktion: readout() auf. 
+   document.getElementById("anzeigen").addEventListener("click", readout); 
+  }); 
+
+  function loadSelection() { 
+   // Überprüfen ob nicht das erste Element in der Auswahlliste ausgewählt wurde 
+   if (document.getElementById("selection1").options[0].selected == false) { 
+    // Den Wert des ausgewählten Elements in der Auswahlliste auslesen 
+    var sel = document.getElementById("selection1").options[document.getElementById("selection1").selectedIndex].value; 
+    // Den Wert (sel) an die Datei: abfrage.php über GET senden 
+    xhr.open("GET", "abfrage.php?Vorname=" + sel); 
+    xhr.send(null); 
+
+    // Auf eine Antwort von der Datei: abfrage.php warten 
+    xhr.onreadystatechange = function () { 
+     if (xhr.readyState == 4 && xhr.status == 200) { 
+
+      // Alte Inhalte der zweiten Auswahlliste löschen 
+      document.getElementById("selection2").options.length = 0; 
+
+      // Die erhaltenen Daten in einzelne Objekte zerlegen (JSON) 
+      var obj = JSON.parse(xhr.responseText);
+
+      // Neue Elemente in die zweite Auswahlliste einfügen 
+      for (var counter = 0; counter < obj.length; counter++) { 
+       document.getElementById("selection2").options[counter] = new Option(obj[counter].names, obj[counter].names); 
+      } 
+     } 
+    } 
+   } 
+  } 
+
+  function readout() { 
+   // Die Formulardaten über POST versenden 
+   xhr.open("POST", "abfrage.php", true); 
+   xhr.send(new FormData(document.getElementById("Form"))); 
+   // Auf eine Antwort von der Datei: abfrage.php warten 
+   xhr.onreadystatechange = function () { 
+    // Status überprüfen 
+    if (xhr.readyState == 4 && xhr.status == 200) { 
+     // Antwort ausgeben 
+     document.getElementById("output").innerHTML = xhr.responseText; 
+    } 
+   } 
+  } 
+</script> 
+
+</head> 
+<body>
+<form id="Form"> 
+
+<p> 
+<label>Vorname:  
+<select name="selection1" id="selection1"> 
+
+ <option selected="selected">- Bitte Auswählen -</option> 
+ <option value="Tom">Tom</option> 
+ <option value="Okan">Okan</option> 
+ <option value="Markus">Markus</option> 
+ <option value="Darwin"">Darwin</option> 
+ <option value="Detlef">Detlef</option> 
+</select> 
+</label> -  
+
+<select name="selection2" id="selection2"> 
+ <option>Nachname</option> 
+</select> 
+<input type="button" value="anzeigen" id="anzeigen"> 
+</p> 
+
+<div id="output"></div> 
+
+</form> 
+
+</body> 
+</html>
